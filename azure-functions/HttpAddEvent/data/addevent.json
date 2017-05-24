@@ -1,0 +1,10 @@
+{
+    "name": "Cricket",
+    "minParticipants": 4,
+    "maxParticipants": 24,
+    "category": "Cricket",
+    "level" : "Intermediate",
+    "details" : {
+        "ball" : "hard tennis"
+    }
+}

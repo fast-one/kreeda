@@ -1,0 +1,13 @@
+{
+  "name": "HttpAddEvent",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "documentdb": "1.12.0",
+    "validator" : "7.0.0",
+    "winston" :"2.3.1"
+  }
+}

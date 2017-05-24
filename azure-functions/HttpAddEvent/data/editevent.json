@@ -1,0 +1,11 @@
+{
+  "name": "Cricket - Updated",
+  "minParticipants": 4,
+  "maxParticipants": 24,
+  "category": "Cricket",
+  "level": "Intermediate",
+  "details": {
+    "ball": "hard tennis"
+  },
+  "id": "9a65a091-0bdd-6214-2505-3b0773c97ce5"
+}
