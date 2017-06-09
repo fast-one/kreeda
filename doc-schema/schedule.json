@@ -1,0 +1,12 @@
+{
+    "id": "",
+    "eventId": "",
+    "locationId": "",
+    "status":"Pending",
+    "startTime": 0,
+    "duration": 0,
+    "recurrenceId": "",
+    "details": {},
+    "updatedTime": 0,
+    "updatedByUser": ""
+}
