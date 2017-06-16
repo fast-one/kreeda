@@ -31,7 +31,7 @@ module.exports = function (context, req) {
     else {
         context.res = {
             status: 400,
-            body: JSON.stringify(validate.errors)
+            body: validate.errors
         };
     }
     context.done();
