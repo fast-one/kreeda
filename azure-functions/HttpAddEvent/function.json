@@ -11,6 +11,23 @@
       "type": "http",
       "direction": "out",
       "name": "res"
+    },{
+      "type": "documentDB",
+      "name": "eventDocument",
+      "databaseName": "testsampledocdb",
+      "collectionName": "Events",
+      "createIfNotExists": false,
+      "connection": "testsampledocdb_DOCUMENTDB",
+      "direction": "out"
+    },
+    {
+      "type": "documentDB",
+      "name": "auditDocument",
+      "databaseName": "testsampledocdb",
+      "collectionName": "Audits",
+      "createIfNotExists": false,
+      "connection": "testsampledocdb_DOCUMENTDB",
+      "direction": "out"
     }
   ]
 }

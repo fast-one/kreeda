@@ -2,11 +2,12 @@
     "id": "",
     "eventId": "",
     "locationId": "",
-    "status":"Pending",
+    "status":"",
     "startTime": 0,
     "duration": 0,
     "recurrenceId": "",
     "details": {},
-    "updatedTime": 0,
-    "updatedByUser": ""
+    "updatedByUser": "",
+    "event" : {},
+    "location" : {}
 }

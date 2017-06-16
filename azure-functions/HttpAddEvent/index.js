@@ -1,30 +1,37 @@
-var documentClient = require("documentdb").DocumentClient;
-var config = require("./config");
-var EventService = require('./service/eventService');
-
-var client = new documentClient(config.endpoint, { "masterKey": config.primaryKey });
-var eventService = new EventService(client, config.database.id, config.collection.id);
+const uuidv4 = require('uuid/v4');
+var Ajv = require('ajv');
+var ajv = new Ajv({ allErrors: true });
+var eventSchema = require('./data/schema');
+var validate = ajv.compile(eventSchema);
 
 module.exports = function (context, req) {
-    context.log('JavaScript HTTP trigger function processed a request : '+req.body);
-    if (req.query.name || (req.body && req.body.name)) {
-        //add event to db
-        var event = req.body;
-        eventService.addEvent(event, function (err) {
-            if (err) {
-                throw (err);
-            }
-        });
+    context.log('JavaScript HTTP trigger function processed a request : ' + req.body);
 
-         context.res = {
-                // status: 200, /* Defaults to 200 */
-                body: "Saved Event :" + (event.name)
-            };
+    //Validate
+    var valid = validate(req.body);
+    if (valid) {
+        //generate unique audit id 
+        var auditId = uuidv4();
+        // define event
+        var event = req.body;
+        event.auditId = auditId
+        context.bindings.eventDocument = event;
+        
+        //define audit
+        var audit = {};
+        audit.type = "Create Event";
+        audit.user = "User Name";
+        audit.data = event
+        context.bindings.auditDocument = audit;
+        //set response
+        context.res = {
+            body: "Valid Event"
+        };
     }
     else {
         context.res = {
             status: 400,
-            body: "Please pass a name on the query string or in the request body"
+            body: JSON.stringify(validate.errors)
         };
     }
     context.done();

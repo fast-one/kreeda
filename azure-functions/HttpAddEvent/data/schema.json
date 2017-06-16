@@ -1,0 +1,37 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "id": "Event",
+    "title": "Event",
+    "description": "Event Details",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "name",
+        "minParticipants",
+        "category",
+        "level"
+    ],
+    "properties": {
+        "name": {
+            "type": "string",
+            "maxLength": 128
+        },
+        "minParticipants": {
+            "type": "integer"
+        },
+        "maxParticipants": {
+            "type": "integer"
+        },
+        "category": {
+            "type": "string",
+            "maxLength": 128
+        },
+        "level": {
+            "type": "string",
+            "maxLength": 128
+        },
+        "details": {
+            "type": "object"
+        }
+    }
+}

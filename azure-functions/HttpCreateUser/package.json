@@ -1,12 +1,12 @@
 {
-  "name": "HttpAddEvent",
+  "name": "HttpCreateUser",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "func run ./"
   },
   "dependencies": {
-    "ajv" : "5.1.6",
-    "uuid" :"3.1.0"
+    "ms-rest-azure": "2.1.2",
+    "azure-graph" : "2.1.0-preview"
   }
 }

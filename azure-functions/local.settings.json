@@ -1,0 +1,6 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "testsampledocdb_DOCUMENTDB": "AccountEndpoint=https://testsampledocdb.documents.azure.com:443/;AccountKey=i22A1HcCwM5xVAqLqX4vMhht3V7KNvsF0mmOO83Q0KwmGxnys5m8wRgm6UJooBCPfkMCNDCV3qoj6MXsd6NxxQ==;"
+  }
+}
