@@ -1,0 +1,26 @@
+{
+    "id": "",
+    "locationName": "",
+    "geoInfo": {
+        "type": "Point",
+        "coordinates": [31.9, -4.8]
+    },
+    "address": {
+        "address1": "",
+        "address2": "",
+        "city": "",
+        "state": "",
+        "country": "",
+        "pincode": 12345
+    },
+    "description":"",
+    "amenities":["Pavillion", "Washroom", "Wooden court"],
+    "authorizedUser": [{
+        "name":"",
+        "phoneNumer": "+911234567890",
+        "email":""
+    }],
+    "status":"ACTIVE",
+    "createdAt":"timestamp",
+    "updatedAt":"timestamp"
+}
